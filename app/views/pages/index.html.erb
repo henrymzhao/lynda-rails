@@ -1,0 +1,38 @@
+<% if !flash[:notice].blank? %>
+<div>
+  <%=flash[:notice]%>
+</div>
+<% end %>
+
+<div>
+  <h1>Pages Index</h1>
+  <h2>
+    <%=link_to("Create Page", new_page_path) %>
+  </h2>
+  <table>
+    <th>Subject ID</th>
+    <th>Name</th>
+    <th>Permalink</th>
+    <th>Position</th>
+    <th>Visible</th>
+    <th>Created On</th>
+    <th>Updated On</th>
+    <th>Actions</th>
+    <% @pages.each do |n| %>
+    <tr>
+      <td><%=n.subject_id%></td>
+      <td><%=n.name%></td>
+      <td><%=n.permalink%></td>
+      <td><%=n.position%></td>
+      <td><%=n.visible%></td>
+      <td><%=n.created_at%></td>
+      <td><%=n.updated_at%></td>
+      <td>
+        <%=link_to("Show", page_path(n.id))%>
+        <%=link_to("Edit", edit_page_path(n.id))%>
+        <%=link_to("Delete", delete_page_path(n.id))%>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

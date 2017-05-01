@@ -1,0 +1,35 @@
+<div>
+  <h1>Creating a new page</h1>
+
+  <table>
+    <%= form_for(@page) do |n| %>
+    <tr>
+      <th>Subject ID</th>
+      <td>
+        <%= n.text_field(:subject_id) %>
+      </td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td>
+        <%= n.text_field(:name) %>
+      </td>
+    </tr>
+    <tr>
+      <th>Permalink</th>
+      <td>
+        <%= n.text_field(:permalink) %>
+      </td>
+    </tr>
+    <tr>
+      <th>Visible</th>
+      <td>
+        <%= n.text_field(:visible) %>
+      </td>
+    </tr>
+    <tr>
+      <%= n.submit("Create Page") %>
+    </tr>
+    <%end%>
+  </table>
+</div>

@@ -1,0 +1,35 @@
+<div>
+  <h1>Viewing <%= @page.name %></h1>
+
+  <h2><%=link_to("Return to index", pages_path)%></h2>
+
+  <table>
+    <tr>
+      <th>Subject ID</th>
+      <td>
+        <%= @page.subject_id %>
+      </td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td>
+        <%= @page.name %>
+      </td>
+    </tr>
+    <tr>
+      <th>Permalink</th>
+      <td>
+        <%= @page.permalink %>
+      </td>
+    </tr>
+    <tr>
+      <th>Visible</th>
+      <td>
+        <%= @page.visible %>
+      </td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+</div>

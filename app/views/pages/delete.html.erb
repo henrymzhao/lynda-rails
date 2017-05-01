@@ -1,0 +1,7 @@
+<div>
+  <h1>Are you sure you want to delete page <%=@page.name%>?</h1>
+
+  <%= form_for @page, method: 'delete' do |n| %>
+    <%= n.submit("Confirm") %>
+  <% end %>
+</div>

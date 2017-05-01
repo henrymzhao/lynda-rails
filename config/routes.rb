@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   root 'demo#index'
 
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
+
   resources :subjects do
     member do
       get :delete

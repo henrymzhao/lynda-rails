@@ -1,3 +1,9 @@
+<% if !flash[:notice].blank? %>
+  <div>
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <div>
   <title>Subjects</title>
   <h1>Subjects Index</h1>
