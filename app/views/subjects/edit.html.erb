@@ -1,0 +1,12 @@
+<div>
+  <h1>Editing: <%=@subject.name%></h1>
+
+  <%= form_for(@subject) do |n| %>
+    <%= n.text_field(:name) %>
+    <%= n.text_field(:position) %>
+    <%= n.text_field(:visible) %>
+
+    <%= n.submit("Create Subject") %>
+
+  <%end%>
+</div>

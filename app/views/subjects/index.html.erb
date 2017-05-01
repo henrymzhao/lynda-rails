@@ -1,0 +1,29 @@
+<div>
+  <title>Subjects</title>
+  <h1>Subjects Index</h1>
+  <%=link_to('New Subject', new_subject_path)%>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Visible</th>
+      <th>Created</th>
+      <th>Actions</th>
+    </tr>
+    <%Subject.all.each do |n|%>
+      <tr>
+        <td><%=n.id%></td>
+        <td><%=n.name%></td>
+        <td><%=n.position%></td>
+        <td><%=n.visible ? 'Yes' : 'No' %></td>
+        <td><%=n.created_at%></td>
+        <td>
+          <%=link_to('Show', subject_path(n.id))%>
+          <%=link_to('Edit', edit_subject_path(n.id))%>
+          <%=link_to('Delete', delete_subject_path(n.id))%>
+        </td>
+      </tr>
+    <%end%>
+  </table>
+</div>
